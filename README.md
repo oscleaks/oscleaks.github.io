@@ -20,4 +20,4 @@
 
 <h2>Contribution</h2>
 <p>Contributions are welcome from the community. Please ensure that anything submitted respects copyright and the original creators' work.</p>
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=[SEU_USUARIO.SEUREPOSITORIO](https://oscleaks.github.io/Oscleaks/)
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=(https://oscleaks.github.io/Oscleaks/)

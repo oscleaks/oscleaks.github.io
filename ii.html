@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Inanimate Insanity Leaks | OSC-LEAKS</title>
+    <meta name="description" content="Exclusive Inanimate Insanity leaks, episodes, and behind-the-scenes content">
+    <meta name="keywords" content="Inanimate Insanity, II, AnimationEpic, object show leaks, season 4">
+    
+    <link rel="icon" type="image/jpg" href="https://i.postimg.cc/ncQPW680/logo-1.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            margin-bottom: 16px;
+        }
+        .video-container video,
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        .mission-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .mission-tab {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #ccc;
+        }
+        .mission-tab.active {
+            background: #2a2a2a;
+            border-color: #ff3366;
+            color: #ff3366;
+        }
+        .mission-content {
+            display: none;
+        }
+        .mission-content.active {
+            display: block;
+        }
+        .file-item {
+            background: rgba(26, 26, 26, 0.7);
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+        .file-item:hover {
+            background: rgba(39, 39, 39, 0.7);
+            transform: translateY(-2px);
+        }
+        .mission-status {
+            background: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+            border: 1px solid rgba(34, 197, 94, 0.4);
+            border-radius: 9999px;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, #ff3366 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .cta-button.primary {
+            background: #ff3366;
+            color: white;
+        }
+        .cta-button.primary:hover {
+            background: #e02e5c;
+            transform: translateY(-2px);
+        }
+        .cta-button.outline {
+            background: transparent;
+            border: 2px solid #ff3366;
+            color: #ff3366;
+        }
+        .cta-button.outline:hover {
+            background: #ff3366;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .image-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .image-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        /* Footer Tabs Styles */
+        .footer-tabs {
+            margin-top: 2rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+        .tab-buttons {
+            display: flex;
+            border-bottom: 1px solid #374151;
+            margin-bottom: 1.5rem;
+            gap: 0.5rem;
+        }
+        .tab-button {
+            background: none;
+            border: none;
+            color: #9CA3AF;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 5px 5px 0 0;
+        }
+        .tab-button.active {
+            color: #ff3366;
+            border-bottom-color: #ff3366;
+            background: rgba(255, 51, 102, 0.1);
+        }
+        .tab-button:hover:not(.active) {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .tab-content {
+            min-height: 200px;
+        }
+        .tab-pane {
+            display: none;
+        }
+        .tab-pane.active {
+            display: block;
+        }
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+            gap: 1rem;
+            justify-items: center;
+            padding: 1rem;
+        }
+        .buttons-grid a {
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .buttons-grid a:hover {
+            transform: scale(1.1);
+        }
+        .buttons-grid img {
+            border: 1px solid #444;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .buttons-grid img:hover {
+            border-color: #ff3366;
+            box-shadow: 0 0 10px rgba(255, 51, 102, 0.3);
+        }
+        .webring-link {
+            color: #60A5FA;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.25rem 0.5rem;
+            border-radius: 3px;
+        }
+        .webring-link:hover {
+            color: #ff3366;
+            text-decoration: underline;
+            background: rgba(255, 51, 102, 0.1);
+        }
+        
+        /* ILoveWebring Styles */
+        .badge-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 15px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+        .badge-ping {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ping-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #b389ff 0%, #ff3366 100%);
+            border-radius: 50%;
+            opacity: 0.2;
+        }
+        .ping-count {
+            color: #b389ff;
+            font-weight: bold;
+            z-index: 1;
+        }
+        .badge-button {
+            flex: 1;
+        }
+        .badge-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .badge-text {
+            display: flex;
+            flex-direction: column;
+        }
+        .badge-text span:first-child {
+            font-weight: bold;
+            color: #b389ff;
+        }
+        .badge-text span:last-child {
+            font-size: 0.8rem;
+            color: #9CA3AF;
+        }
+    </style>
+</head>
+<body class="text-gray-200 bg-black min-h-screen">
+    <div id="particles-js" class="fixed inset-0 z-0"></div>
+    <div class="content-wrapper relative z-10">
+        <nav class="py-4 relative z-10 bg-black/40 backdrop-blur-md">
+            <div class="container mx-auto px-4 flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="logo-link flex items-center space-x-2">
+                        <svg class="logo-svg w-8 h-8" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#fff;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ff3366;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <polygon points="50,10 20,50 50,90 80,50" fill="none" stroke="url(#logoGrad)" stroke-width="3"/>
+                            <circle cx="50" cy="50" r="5" fill="url(#logoGrad)"/>
+                        </svg>
+                        <span class="logo-text text-white font-bold text-lg tracking-wide">OSC-LEAKS</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex space-x-6 text-white font-medium">
+                    <a href="index.html" class="nav-link relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#ff3366] after:transition-all after:duration-300 hover:after:w-full hover:text-[#ff3366]">Home</a>
+                    <a href="navigation.html" class="nav-link relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#ff3366] after:transition-all after:duration-300 hover:after:w-full hover:text-[#ff3366]">BFDI x II Tour</a>
+                    <a href="tpot.html" class="nav-link relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#ff3366] after:transition-all after:duration-300 hover:after:w-full hover:text-[#ff3366]">TPOT</a>
+                    <a href="ii.html" class="nav-link relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#ff3366] after:transition-all after:duration-300 hover:after:w-full hover:text-[#ff3366] active">II</a>
+                    <a href="bfdia.html" class="nav-link relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#ff3366] after:transition-all after:duration-300 hover:after:w-full hover:text-[#ff3366]">BFDIA</a>
+                    <a href="downloads.html" class="nav-link relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#ff3366] after:transition-all after:duration-300 hover:after:w-full hover:text-[#ff3366]">Downloads</a>
+                    <a href="chat.html" class="nav-link relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#ff3366] after:transition-all after:duration-300 hover:after:w-full hover:text-[#ff3366]">Chat</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="menu-btn" class="focus:outline-none text-white text-2xl">☰</button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden bg-black/80 backdrop-blur-md px-4 py-3 space-y-2 text-white">
+                <a href="index.html" class="block nav-link hover:text-[#ff3366]">Home</a>
+                <a href="navigation.html" class="block nav-link hover:text-[#ff3366]">BFDI x II Tour</a>
+                <a href="tpot.html" class="block nav-link hover:text-[#ff3366]">TPOT</a>
+                <a href="ii.html" class="block nav-link hover:text-[#ff3366]">II</a>
+                <a href="bfdia.html" class="block nav-link hover:text-[#ff3366]">BFDIA</a>
+                <a href="downloads.html" class="block nav-link hover:text-[#ff3366]">Downloads</a>
+                <a href="chat.html" class="block nav-link hover:text-[#ff3366]">Chat</a>
+            </div>
+        </nav>
+
+        <section class="section py-8">
+            <div class="container mx-auto px-4">
+                <div class="section-header mb-8">
+                    <div class="flex justify-between items-center mb-8">
+                        <h1 class="section-title">Inanimate Insanity Leaks</h1>
+                        <a href="navigation.html" class="cta-button outline">Back to Tour</a>
+                    </div>
+                </div>
+                
+                <div class="mission-tabs">
+                    <button class="mission-tab active" data-tab="ii-s4e2">Season 4 Episode 2</button>
+                    <button class="mission-tab" data-tab="ii-s4e3">Season 4 Episode 3</button>
+                </div>
+                
+                <div class="mission-content active" id="ii-s4e2">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="file-item">
+                            <h3 class="text-xl font-bold mb-4">Season 4 Episode 2</h3>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/STMOBoFowjY" allowfullscreen></iframe>
+                            </div>
+                            <p class="text-gray-300 mt-2">Official episode now available</p>
+                            <p class="text-gray-400 text-sm mt-1">August 4, 2025 (YouTube)</p>
+                            <span class="mission-status mt-2">Released</span>
+                        </div>
+                        
+                        <div class="file-item">
+                            <h3 class="text-xl font-bold mb-4">Season 4 Episode 2 (Meetup Recording)</h3>
+                            <div class="video-container">
+                                <video controls>
+                                    <source src="https://files.catbox.moe/5889kx.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <p class="text-gray-300 mt-2">Footage from BFDI x II Tour 2025</p>
+                            <p class="text-gray-400 text-sm mt-1">July 19 – August 3, 2025 (Meetup)</p>
+                            <span class="mission-status mt-2">Leaked</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mission-content" id="ii-s4e3">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="file-item">
+                            <h3 class="text-xl font-bold mb-4">Season 4 Episode 3 Official</h3>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/f1D1_4850jQ" allowfullscreen></iframe>
+                            </div>
+                            <p class="text-gray-300 mt-2">Official episode now available</p>
+                            <p class="text-gray-400 text-sm mt-1">September 20, 2025 (YouTube)</p>
+                            <span class="mission-status mt-2">Released</span>
+                        </div>
+                        
+                        <div class="file-item">
+                            <h3 class="text-xl font-bold mb-4">Season 4 Episode 3 Early Leak</h3>
+                            <div class="video-container">
+                                <video controls>
+                                    <source src="https://files.catbox.moe/79w5uq.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <p class="text-gray-300 mt-2">Early leaked footage before official release</p>
+                            <p class="text-gray-400 text-sm mt-1">September 18, 2025 (2 days before release)</p>
+                            <span class="mission-status mt-2">Leaked</span>
+                        </div>
+                        
+                        <div class="file-item md:col-span-2">
+                            <h3 class="text-xl font-bold mb-4">Season 4 Episode 3 Leaks</h3>
+                            <div class="image-container">
+                                <img src="https://i.postimg.cc/85hMyScf/animationepic-20250917-0001.jpg" alt="II S4E3 Leak 1">
+                                <img src="https://i.postimg.cc/cHqfMHxN/animationepic-20250917-0002.jpg" alt="II S4E3 Leak 2">
+                            </div>
+                            <p class="text-gray-300 mt-2">Leaked animation frames from upcoming episode</p>
+                            <p class="text-gray-400 text-sm mt-1">September 17, 2025 (Production)</p>
+                            <span class="mission-status mt-2">Leaked</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-black/80 backdrop-blur-md border-t border-gray-800 mt-16">
+            <div class="container mx-auto px-4 py-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="footer-brand">
+                        <h3 class="text-white font-bold text-lg mb-4">OSC-LEAKS</h3>
+                        <p class="text-gray-400">Your source for exclusive BFDI, TPOT, and Inanimate Insanity leaks, behind-the-scenes content, and community discussions.</p>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="text-white font-semibold mb-4">Content</h4>
+                        <ul class="space-y-2">
+                            <li><a href="navigation.html" class="text-gray-400 hover:text-[#ff3366] transition">BFDI x II Tour</a></li>
+                            <li><a href="tpot.html" class="text-gray-400 hover:text-[#ff3366] transition">TPOT</a></li>
+                            <li><a href="ii.html" class="text-gray-400 hover:text-[#ff3366] transition">Inanimate Insanity</a></li>
+                            <li><a href="bfdia.html" class="text-gray-400 hover:text-[#ff3366] transition">BFDIA</a></li>
+                            <li><a href="downloads.html" class="text-gray-400 hover:text-[#ff3366] transition">Downloads</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="text-white font-semibold mb-4">Community</h4>
+                        <ul class="space-y-2">
+                            <li><a href="chat.html" class="text-gray-400 hover:text-[#ff3366] transition">Chat</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-[#ff3366] transition">Discord</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-[#ff3366] transition">Forums</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-[#ff3366] transition">Contribute</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-[#ff3366] transition">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="text-white font-semibold mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-[#ff3366] transition">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-[#ff3366] transition">Terms of Service</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-[#ff3366] transition">DMCA</a></li>
+                            <li><a href="credits.html" class="text-gray-400 hover:text-[#ff3366] transition">Credits</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Webrings and Buttons Section -->
+                <div class="footer-tabs mt-8">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="webrings">Webrings</button>
+                        <button class="tab-button" data-tab="buttons">Buttons 88x31</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="webrings">
+                            <div class="footer-column">
+                                <h4 class="text-white font-semibold mb-4">Webrings</h4>
+                                
+                                <!-- Rock Webring -->
+                                <div class="py-2">
+                                    <center>
+                                        <script data-widget="images" src="https://rock-webring.neocities.org/webstring.js"></script>
+                                    </center>
+                                </div>
+                                
+                                <!-- Hotline Webring -->
+                                <div class="py-2 border-t border-b border-orange-700">
+                                    <p class="text-cyan-400 mb-2">Hotline Webring</p>
+                                    <a href="https://hotlinewebring.club/osc-leaks/previous" class="webring-link">← Previous</a>
+                                    <span class="mx-3 text-cyan-300">//</span>
+                                    <a href="https://hotlinewebring.club/osc-leaks/next" class="webring-link">Next →</a>
+                                </div>
+                                
+                                <!-- Ghostring Webring -->
+                                <div class="py-2">
+                                    <p class="text-purple-400 mb-2">Ghostring</p>
+                                    <a href="https://ghostring.neocities.org/osc-leaks/previous" class="webring-link">← Previous</a>
+                                    <span class="mx-3 text-purple-300">//</span>
+                                    <a href="https://ghostring.neocities.org/osc-leaks/next" class="webring-link">Next →</a>
+                                </div>
+                                
+                                <!-- Low Tech Webring -->
+                                <div class="py-2 border-t border-b border-orange-600">
+                                    <p class="text-orange-400 mb-2">Low Tech Webring (Historic)</p>
+                                    <a href="#" class="webring-link">← Previous</a>
+                                    <span class="mx-3">//</span>
+                                    <a href="#" class="webring-link">Next →</a>
+                                </div>
+
+                                <!-- 404 Salad Webring -->
+                                <div class="py-2 border-t border-b border-blue-600">
+                                    <p class="text-blue-400 mb-2">404 Salad Webring</p>
+                                    <a href="https://404salad.github.io/webring/osc-leaks/previous" class="webring-link">←</a>
+                                    <a href="https://404salad.github.io/webring/" class="webring-link mx-2">404 Salad</a>
+                                    <a href="https://404salad.github.io/webring/osc-leaks/next" class="webring-link">→</a>
+                                </div>
+
+                                <!-- No AI Webring -->
+                                <div class="py-2 border-t border-b border-yellow-600">
+                                    <p class="text-yellow-500 mb-2">No AI Webring</p>
+                                    <map name="noaicode">
+                                        <area href="https://baccyflap.com/noai" target="_blank" shape="poly" coords="55,0,255,0,255,13,294,13,294,51,55,51" alt="no ai webring" title="no ai webring">
+                                        <area href="https://baccyflap.com/noai/?prv&s=osc" target="_top" shape="poly" coords="1,25,52,0,52,51" alt="previous" title="previous">
+                                        <area href="https://baccyflap.com/noai/?rnd" target="_top" shape="rect" coords="258,1,294,10" alt="random" title="random">
+                                        <area href="https://baccyflap.com/noai/?nxt&s=osc" target="_top" shape="poly" coords="349,25,297,0,297,51" alt="next" title="next">
+                                    </map>
+                                    <img usemap="#noaicode" src="https://baccyflap.com/noai/codewidget-d.gif" alt="No AI Webring Widget" class="mx-auto">
+                                </div>
+
+                                <!-- Yoyle City Webring -->
+                                <div class="py-2 border-t border-b border-green-500">
+                                    <p class="text-green-400 mb-2">Yoyle City Webring</p>
+                                    <div style="background-color:white; display:inline-block; padding:5px; border-radius:10px;">
+                                        <a href="https://lime360.pythonanywhere.com/prev?url=https://yoyle.city&site=https://osc-leaks.neocities.org">
+                                            <img src="https://yoyle.city/img/webring/prev.png" alt="Previous site" />
+                                        </a>
+                                        <a href="https://yoyle.city/webring">
+                                            <img src="https://yoyle.city/img/webring/button.png" alt="//web" />
+                                        </a>
+                                        <a href="https://lime360.pythonanywhere.com/next?url=https://yoyle.city&site=https://osc-leaks.neocities.org">
+                                            <img src="https://yoyle.city/img/webring/next.png" alt="Next site" />
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- OSC Webring (Horizontal) -->
+                                <div class="py-2 border-t border-b border-pink-500">
+                                    <div id="templateWebring" class="mx-auto">
+                                        <link rel="stylesheet" href="https://fan.nekoweb.org/webring.css">
+                                        <div id="webringiconbox">
+                                            <img id="iconWebring" src="https://fan.nekoweb.org/images/oscwricons/fantt.png" alt="OSC Webring Icon" class="mx-auto">
+                                        </div>
+                                        <div id="webringdescbox">
+                                            <p id="webringdesc" style="font-size: small;">
+                                                <strong>Fan</strong> is a certified<br>
+                                                <strong>Test Tube</strong> fan in the <strong>OSC Webring</strong>!
+                                            </p>
+                                        </div>
+                                        <div id="webringlinks">
+                                            <p id="linkparaWebring" style="font-size:small;"> | 
+                                                <a id="wr" href="https://fan.nekoweb.org/oscwrmem.html">Members List</a> | 
+                                                Part of the <a id="wr" href="https://fan.nekoweb.org/oscwr.html">OSC Webring</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- RoRing Webring -->
+                                <div class="py-2 border-t border-b border-red-500">
+                                    <p class="text-red-400 mb-2">RoRing</p>
+                                    <table><tr><td><a href="https://roring.neocities.org/files/stuff/prev?id=Oscleaks"> <img src="https://roring.neocities.org/files/deco/arrow21.png" height="30"></a></td><td><a href="https://roring.neocities.org/"><img src="https://roring.neocities.org/files/deco/widget2.png" width="150"></a></td><td><a href="https://roring.neocities.org/files/stuff/next?id=OscLeaks"><img src="https://roring.neocities.org/files/deco/arrow22.png" height="30"></a></td></tr></table>
+                                </div>
+                                
+                                <!-- ILoveWebring Webring Badge Embed -->
+                                <div id="ilovewebring-widget"></div>
+
+                                <!-- Additional Webrings -->
+                                <div id='gfdkris' class="py-2 border-t border-b border-indigo-600"> 
+                                    <p class="text-indigo-400 mb-2">Fab's Tarot Corner Webring</p>
+                                    <script type="text/javascript" src="https://fabstarotcorner.neocities.org/webring/onionring-variables.js"></script>
+                                    <script type="text/javascript" src="https://fabstarotcorner.neocities.org/webring/onionring-widget.js"></script>
+                                </div>
+
+                                <!-- DS Ring Webring -->
+                                <div id='dsring' class="py-2 border-t border-b border-teal-600">
+                                    <p class="text-teal-400 mb-2">DS Ring Webring</p>
+                                    <script type="text/javascript" src="https://dsring.neocities.org/onion/onionring-variables.js"></script>
+                                    <script type="text/javascript" src="https://dsring.neocities.org/onion/onionring-widget.js"></script>
+                                </div>
+
+                                <!-- "From [Country] With Love" (Brazil) Webring -->
+                                <div id='fcwl' class="py-2 border-t border-b border-green-600">
+                                    <p class="text-green-400 mb-2">From [Country] With Love (Brazil)</p>
+                                    <script type="text/javascript" src="https://beaus-silly-folder.nekoweb.org/my-webrings/FCWL/onionring-variables.js"></script>
+                                    <script type="text/javascript" src="https://beaus-silly-folder.nekoweb.org/my-webrings/FCWL/onionring-widget.js"></script>
+
+                                    <img src="https://beaus-silly-folder.nekoweb.org/my-webrings/FCWL/widgets/widget-images/braz_main.png" alt="From Country With Love - Brazil badge">
+                                </div>
+
+                                <!-- Epic Ring Webring -->
+<div id='epicring' class="py-2 border-t border-b border-yellow-500">
+    <p class="text-yellow-400 mb-2">Epic Ring Webring</p>
+    <script type="text/javascript" src="https://epic1.nekoweb.org/epicring/onionring-variables.js"></script>
+    <script type="text/javascript" src="https://epic1.nekoweb.org/epicring/onionring-widget.js"></script>
+</div>
+
+<!-- Linha de separação roxa -->
+<div class="border-t border-purple-500 my-4"></div>
+
+<!-- JaeWEB Webring -->
+<div id="JaeWEB" class="py-2">
+    <p class="text-purple-400 mb-2">JaeWEB Webring</p>
+    <script src="//web.jae.gg/webring-widget.js"></script>
+</div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane" id="buttons">
+                            <div class="buttons-grid">
+                                <a href="https://yoyle.city/" target="_blank">
+                                    <img src="https://yoyle.city/img/buttons/yoyledotcity.png" alt="Yoyle City" width="88" height="31">
+                                </a>
+                                <a href="https://amazingobjectrace.neocities.org/" target="_blank">
+                                    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/ezgif.com-animated-gif-maker(21).gif" alt="Button" width="88" height="31">
+                                </a>
+                                <a href="https://raymondtheterrible.neocities.org/"><img src="https://i.imgur.com/kCWvlS9.gif"></a> <br>
+                                <a href="https://osc-leaks.neocities.org/" target="_blank">
+                                    <img src="https://osc-leaks.neocities.org/Embeds/143%20Sem%20T%C3%ADtulo_20251022121617.png" alt="OscLeaks" width="88" height="31">
+                                </a>
+                                <img src="https://objectifiedcomic.neocities.org/button.png">
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                    <p class="text-gray-400">&copy; 2025 OSC-LEAKS. All rights reserved.</p>
+                    <p class="text-gray-500 text-sm mt-2">This site is not affiliated with jacknjellify or AnimationEpic. All content is used under fair use for educational and archival purposes.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            document.querySelectorAll('.mission-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    document.querySelectorAll('.mission-tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.mission-content').forEach(c => c.classList.remove('active'));
+                    
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+
+            // Footer tab functionality
+            const footerTabButtons = document.querySelectorAll('.tab-button');
+            const footerTabPanes = document.querySelectorAll('.tab-pane');
+            
+            if (footerTabButtons.length > 0) {
+                footerTabButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        // Remove active class from all tabs
+                        footerTabButtons.forEach(btn => btn.classList.remove('active'));
+                        footerTabPanes.forEach(pane => pane.classList.remove('active'));
+                        
+                        // Add active class to clicked tab
+                        this.classList.add('active');
+                        const tabId = this.getAttribute('data-tab');
+                        const targetPane = document.getElementById(tabId);
+                        if (targetPane) {
+                            targetPane.classList.add('active');
+                        }
+                    });
+                });
+            }
+
+            // ILoveWebring Webring Script
+            (function() {
+                var sites = [
+                    'https://osc-leaks.neocities.org/',
+                    'https://ragazzasola.neocities.org/',
+                    'https://ilovewebring.neocities.org/'
+                ];
+
+                var ringName = 'ILoveWebring';
+                var ringID = 'ilovewebring-widget';
+                var useIndex = true;
+                var indexPage = 'https://ilovewebring.neocities.org/webring.html';
+                var useRandom = true;
+
+                var tag = document.getElementById(ringID);
+                if (!tag) return;
+
+                var thisSite = window.location.href;
+                var thisIndex = null;
+
+                for (var i = 0; i < sites.length; i++) {
+                    if (thisSite.startsWith(sites[i])) {
+                        thisIndex = i;
+                        break;
+                    }
+                }
+
+                if (thisIndex === null) thisIndex = 0;
+
+                function randomSite() {
+                    var otherSites = sites.slice();
+                    if (thisIndex !== null) otherSites.splice(thisIndex, 1);
+                    var randomIndex = Math.floor(Math.random() * otherSites.length);
+                    location.href = otherSites[randomIndex];
+                }
+
+                var prevIndex = (thisIndex - 1 < 0) ? sites.length - 1 : thisIndex - 1;
+                var nextIndex = (thisIndex + 1 >= sites.length) ? 0 : thisIndex + 1;
+
+                tag.innerHTML = `
+                    <div class="badge-group">
+                        <div class="badge-ping">
+                            <span class="ping-bg"></span>
+                            <span class="ping-count">★</span>
+                        </div>
+                        <div class="badge-button">
+                            <div class="badge-inner">
+                                <div class="badge-text">
+                                    <span>${ringName}</span>
+                                    <span>Show your membership</span>
+                                </div>
+                                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                                    <a href="${sites[prevIndex]}" style="color:#b389ff; text-decoration:none;">← Previous</a>
+                                    ${useRandom ? `<a href="javascript:void(0)" onclick="randomSite()" style="color:#b389ff; text-decoration:none;">Random</a>` : ''}
+                                    ${useIndex ? `<a href="${indexPage}" style="color:#b389ff; text-decoration:none;">Index</a>` : ''}
+                                    <a href="${sites[nextIndex]}" style="color:#b389ff; text-decoration:none;">Next →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+            })();
+
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS('particles-js', {
+                    "particles": {
+                        "number": {"value":80,"density":{"enable":true,"value_area":800}},
+                        "color":{"value":"#ff3366"},
+                        "shape":{"type":"circle"},
+                        "opacity":{"value":0.5,"random":false},
+                        "size":{"value":3,"random":true},
+                        "line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.2,"width":1},
+                        "move":{"enable":true,"speed":2,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false}
+                    },
+                    "interactivity":{
+                        "detect_on":"canvas",
+                        "events":{
+                            "onhover":{"enable":true,"mode":"repulse"},
+                            "onclick":{"enable":true,"mode":"push"},
+                            "resize":true
+                        },
+                        "modes":{
+                            "repulse":{"distance":100,"duration":0.4},
+                            "push":{"particles_nb":4}
+                        }
+                    },
+                    "retina_detect":true
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>TPOT Leaks | OSC-LEAKS</title>
+    <meta name="description" content="Exclusive TPOT leaks, episodes, and behind-the-scenes content from the BFDI x II Tour 2025">
+    <meta name="keywords" content="TPOT, BFDI, The Power of Two, jacknjellify, object show leaks">
+    
+    <link rel="icon" type="image/jpg" href="https://i.postimg.cc/ncQPW680/logo-1.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            margin-bottom: 16px;
+        }
+        .video-container video,
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        .mission-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .mission-tab {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #ccc;
+        }
+        .mission-tab.active {
+            background: #2a2a2a;
+            border-color: #ff3366;
+            color: #ff3366;
+        }
+        .mission-content {
+            display: none;
+        }
+        .mission-content.active {
+            display: block;
+        }
+        .file-item {
+            background: rgba(26, 26, 26, 0.7);
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+        .file-item:hover {
+            background: rgba(39, 39, 39, 0.7);
+            transform: translateY(-2px);
+        }
+        .mission-status {
+            background: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+            border: 1px solid rgba(34, 197, 94, 0.4);
+            border-radius: 9999px;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, #ff3366 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .cta-button.primary {
+            background: #ff3366;
+            color: white;
+        }
+        .cta-button.primary:hover {
+            background: #e02e5c;
+            transform: translateY(-2px);
+        }
+        .cta-button.outline {
+            background: transparent;
+            border: 2px solid #ff3366;
+            color: #ff3366;
+        }
+        .cta-button.outline:hover {
+            background: #ff3366;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .twitter-container {
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        /* Footer Tabs Styles */
+        .footer-tabs {
+            margin-top: 2rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+        .tab-buttons {
+            display: flex;
+            border-bottom: 1px solid #374151;
+            margin-bottom: 1.5rem;
+            gap: 0.5rem;
+        }
+        .tab-button {
+            background: none;
+            border: none;
+            color: #9CA3AF;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 5px 5px 0 0;
+        }
+        .tab-button.active {
+            color: #ff3366;
+            border-bottom-color: #ff3366;
+            background: rgba(255, 51, 102, 0.1);
+        }
+        .tab-button:hover:not(.active) {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .tab-content {
+            min-height: 200px;
+        }
+        .tab-pane {
+            display: none;
+        }
+        .tab-pane.active {
+            display: block;
+        }
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+            gap: 1rem;
+            justify-items: center;
+            padding: 1rem;
+        }
+        .buttons-grid a {
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .buttons-grid a:hover {
+            transform: scale(1.1);
+        }
+        .buttons-grid img {
+            border: 1px solid #444;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .buttons-grid img:hover {
+            border-color: #ff3366;
+            box-shadow: 0 0 10px rgba(255, 51, 102, 0.3);
+        }
+        .webring-link {
+            color: #60A5FA;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.25rem 0.5rem;
+            border-radius: 3px;
+        }
+        .webring-link:hover {
+            color: #ff3366;
+            text-decoration: underline;
+            background: rgba(255, 51, 102, 0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-200 bg-black min-h-screen">
+    <div id="particles-js" class="fixed inset-0 z-0"></div>
+    <div class="content-wrapper relative z-10">
+        <nav class="py-4 relative z-10 bg-black/40 backdrop-blur-md">
+            <div class="container mx-auto px-4 flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="logo-link flex items-center space-x-2">
+                        <svg class="logo-svg w-8 h-8" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#fff;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ff3366;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <polygon points="50,10 20,50 50,90 80,50" fill="none" stroke="url(#logoGrad)" stroke-width="3"/>
+                            <circle cx="50" cy="50" r="5" fill="url(#logoGrad)"/>
+                        </svg>
+                        <span class="logo-text text-white font-bold text-lg tracking-wide">OSC-LEAKS</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex space-x-6 text-white font-medium">
+                    <a href="index.html" class="nav-link relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#ff3366] after:transition-all after:duration-300 hover:after:w-full hover:text-[#ff3366]">Home</a>
+                    <a href="navigation.html" class="nav-link relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#ff3366] after:transition-all after:duration-300 hover:after:w-full hover:text-[#ff3366]">BFDI x II Tour</a>
+                    <a href="tpot.html" class="nav-link relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#ff3366] after:transition-all after:duration-300 hover:after:w-full hover:text-[#ff3366] active">TPOT</a>
+                    <a href="ii.html" class="nav-link relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#ff3366] after:transition-all after:duration-300 hover:after:w-full hover:text-[#ff3366]">II</a>
+                    <a href="bfdia.html" class="nav-link relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#ff3366] after:transition-all after:duration-300 hover:after:w-full hover:text-[#ff3366]">BFDIA</a>
+                    <a href="downloads.html" class="nav-link relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#ff3366] after:transition-all after:duration-300 hover:after:w-full hover:text-[#ff3366]">Downloads</a>
+                    <a href="chat.html" class="nav-link relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#ff3366] after:transition-all after:duration-300 hover:after:w-full hover:text-[#ff3366]">Chat</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="menu-btn" class="focus:outline-none text-white text-2xl">☰</button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden bg-black/80 backdrop-blur-md px-4 py-3 space-y-2 text-white">
+                <a href="index.html" class="block nav-link hover:text-[#ff3366]">Home</a>
+                <a href="navigation.html" class="block nav-link hover:text-[#ff3366]">BFDI x II Tour</a>
+                <a href="tpot.html" class="block nav-link hover:text-[#ff3366]">TPOT</a>
+                <a href="ii.html" class="block nav-link hover:text-[#ff3366]">II</a>
+                <a href="bfdia.html" class="block nav-link hover:text-[#ff3366]">BFDIA</a>
+                <a href="downloads.html" class="block nav-link hover:text-[#ff3366]">Downloads</a>
+                <a href="chat.html" class="block nav-link hover:text-[#ff3366]">Chat</a>
+            </div>
+        </nav>
+
+        <section class="section py-8">
+            <div class="container mx-auto px-4">
+                <div class="section-header mb-8">
+                    <div class="flex justify-between items-center mb-8">
+                        <h1 class="section-title">TPOT Leaks</h1>
+                        <a href="navigation.html" class="cta-button outline">Back to Tour</a>
+                    </div>
+                </div>
+                
+                <div class="mission-tabs">
+                    <button class="mission-tab active" data-tab="tpot19">TPOT 19</button>
+                    <button class="mission-tab" data-tab="tpot20">TPOT 20</button>
+                </div>
+                
+                <div class="mission-content active" id="tpot19">
+                    <div class="file-item mb-6" style="max-width: 800px; margin: 0 auto;">
+                        <h4 class="text-xl font-bold mb-4 text-green-400">TPOT 19 Full Leak</h4>
+                        <p class="text-gray-300 mb-6">
+                            Complete TPOT 19 footage leaked from the BFDI x II Tour 2025 meet-up events.
+                        </p>
+
+                        <div class="space-y-6">
+                            <div class="bg-green-500/10 p-4 rounded-lg border-l-4 border-green-500">
+                                <div class="video-container">
+                                    <video controls class="w-full">
+                                        <source src="https://files.catbox.moe/pfojk4.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <p class="text-gray-300 mt-2 text-center">Full TPOT 19 video | BFDI x II Tour 2025</p>
+                                <p class="text-gray-400 text-sm mt-1 text-center">June 27 – July 13, 2025 (Meetup)</p>
+                            </div>
+
+                            <div class="bg-blue-500/10 p-4 rounded-lg border-l-4 border-blue-500">
+                                <div class="video-container">
+                                    <iframe src="https://www.youtube.com/embed/VrsdG8wJGAg" 
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen
+                                        title="Official TPOT 19 YouTube Release"></iframe>
+                                </div>
+                                <p class="text-gray-300 mt-2 text-center">Official YouTube release</p>
+                                <p class="text-gray-400 text-sm mt-1 text-center">July 14, 2025 – 12:59 PM EST</p>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-6 p-4 bg-green-500/20 rounded-lg">
+                            <p class="text-green-300 text-sm">
+                                Full episode leaked during the meet-up events. Official release followed on YouTube.
+                            </p>
+                        </div>
+                        <span class="mission-status mt-4">Leaked</span>
+                    </div>
+
+                    <div class="file-item mb-6">
+                        <h4 class="text-xl font-bold mb-4">TPOT 19 preview and unused thumbnails</h4>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="file-item">
+                                <h3 class="text-xl font-bold mb-4">Official Clip</h3>
+                                <div class="video-container">
+                                    <video controls>
+                                        <source src="https://files.catbox.moe/q2tzgs.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <p class="text-gray-300 mt-2">32-second official clip</p>
+                                <p class="text-gray-400 text-sm mt-1">June 21, 2025 (in-universe)</p>
+                                <span class="mission-status mt-2">Official</span>
+                            </div>
+                            
+                            <div class="file-item">
+                                <h3 class="text-xl font-bold mb-4">Unused Thumbnails</h3>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <img src="https://i.postimg.cc/C5JZ8Ffk/Screenshot-20250721-215859-Tik-Tok.jpg" alt="Unused thumbnail 1" class="rounded-lg">
+                                    <img src="https://i.postimg.cc/HnTcjJjT/Screenshot-20250721-215902-Tik-Tok.jpg" alt="Unused thumbnail 2" class="rounded-lg">
+                                </div>
+                                <p class="text-gray-300 mt-2">Concept thumbnails that weren't used</p>
+                                <p class="text-gray-400 text-sm mt-1">Related to TPOT 19 production (2025)</p>
+                                <span class="mission-status mt-2">Unused</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-item" style="max-width: 800px; margin: 0 auto; border-color: #3b82f6;">
+                        <h4 class="text-xl font-bold mb-4 text-blue-400">Official Q&A Revelations - TPOT 19</h4>
+                        <p class="text-gray-300 mb-4">
+                            Behind-the-scenes information revealed during the BFDI x II Tour 2025 Q&A sessions:
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-blue-500/10 p-4 rounded-lg border-l-4 border-blue-500">
+                                <h5 class="font-bold text-blue-300 mb-2">Grassy's Emotional Moment</h5>
+                                <p class="text-gray-300 text-sm">
+                                    "Grassy cried in TPOT 19 because people wanted to see Grassy do more"
+                                </p>
+                            </div>
+                            
+                            <div class="bg-blue-500/10 p-4 rounded-lg border-l-4 border-blue-500">
+                                <h5 class="font-bold text-blue-300 mb-2">Writing Challenges</h5>
+                                <p class="text-gray-300 text-sm">
+                                    "The hardest scene to write in TPOT 19 was the One and Pencil scene"
+                                    "Sam was excited to write the One and Pencil scene in TPOT 19"
+                                </p>
+                            </div>
+                            
+                            <div class="bg-blue-500/10 p-4 rounded-lg border-l-4 border-blue-500">
+                                <h5 class="font-bold text-blue-300 mb-2">Long-term Planning</h5>
+                                <p class="text-gray-300 text-sm">
+                                    "TPOT 19's world ending has been planned since TPOT 9"
+                                </p>
+                            </div>
+                            
+                            <div class="bg-blue-500/10 p-4 rounded-lg border-l-4 border-blue-500">
+                                <h5 class="font-bold text-blue-300 mb-2">Crew Satisfaction</h5>
+                                <p class="text-gray-300 text-sm">
+                                    "The crew felt good writing TPOT 19"
+                                </p>
+                            </div>
+                            
+                            <div class="bg-blue-500/10 p-4 rounded-lg border-l-4 border-blue-500">
+                                <h5 class="font-bold text-blue-300 mb-2">Future Development</h5>
+                                <p class="text-gray-300 text-sm">
+                                    "What will happen to Grassy soon"
+                                    (Connects to TPOT 20 continuation)
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4 p-3 bg-blue-500/20 rounded-lg">
+                            <p class="text-blue-300 text-sm">
+                                All information from official BFDI x II Tour 2025 Q&A sessions
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                  
+                <div class="mission-content" id="tpot20">
+                    <div class="file-item mb-6" style="max-width: 800px; margin: 0 auto;">
+                        <h4 class="text-xl font-bold mb-4">Official TPOT 20 Teaser</h4>
+                        <div class="twitter-container rounded-lg overflow-hidden mb-4">
+                            <blockquote class="twitter-tweet" data-media-max-width="560">
+                                <p lang="en" dir="ltr">It's nearly here! BFDI:TPOT 20 is releasing in theaters and on YouTube next week!
+                                    <a href="https://t.co/fn1NdtuXbt">pic.twitter.com/fn1NdtuXbt</a>
+                                </p>
+                                &mdash; Jacknjellify (@jacknjellify)
+                                <a href="https://twitter.com/jacknjellify/status/1976688399152238691?ref_src=twsrc%5Etfw">October 10, 2025</a>
+                            </blockquote>
+                        </div>
+                        <p class="text-gray-300">Official announcement from jacknjellify - TPOT 20 coming October 16 and 17!</p>
+                        <p class="text-gray-400 text-sm mt-1">October 16, 2025 - Theaters & YouTube on 17 (EST)</p>
+                        <span class="mission-status mt-2">Official</span>
+                    </div>
+
+                    <div class="file-item mb-6" style="max-width: 800px; margin: 0 auto;">
+                        <h4 class="text-xl font-bold mb-4 text-green-400">TPOT 20 Full & Theater Footage</h4>
+                        <p class="text-gray-300 mb-6">
+                            Clips from TPOT 20 — first the full leak (Vimeo) followed by audience recordings from theater screenings.
+                            Note: Some clips may be repeated. Watermarks may appear.
+                        </p>
+
+                        <div class="space-y-6">
+                            <div class="bg-green-500/10 p-4 rounded-lg border-l-4 border-green-500">
+                                <div class="video-container">
+                                    <iframe src="https://www.youtube.com/embed/D4dSs-iU1ac?si=pf3nAFIz30M3veLp"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen
+                                        title="Official TPOT 20 Video"></iframe>
+                                </div>
+                                <p class="text-gray-300 mt-2 text-center">Official TPOT 20 Video</p>
+                            </div>
+
+                            <div class="bg-green-500/10 p-4 rounded-lg border-l-4 border-green-500">
+                                <div class="video-container">
+                                    <iframe src="https://player.vimeo.com/video/1128164435?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                                        frameborder="0"
+                                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin"
+                                        title="BFDI:TPOT 20 - Alone (1080p, h264)"></iframe>
+                                </div>
+                                <p class="text-gray-300 mt-2 text-center">BFDI:TPOT 20 — Alone (1080p, Vimeo leak)</p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-gray-700/50 p-3 rounded-lg">
+                                    <video controls class="w-full rounded-lg">
+                                        <source src="https://files.catbox.moe/lkrn7k" type="video/mp4">
+                                    </video>
+                                    <p class="text-gray-300 mt-2 text-sm text-center">TPOT 20 theater clip #1</p>
+                                </div>
+                                <div class="bg-gray-700/50 p-3 rounded-lg">
+                                    <video controls class="w-full rounded-lg">
+                                        <source src="https://files.catbox.moe/9njw2t" type="video/mp4">
+                                    </video>
+                                    <p class="text-gray-300 mt-2 text-sm text-center">TPOT 20 theater clip #2</p>
+                                </div>
+                                <div class="bg-gray-700/50 p-3 rounded-lg">
+                                    <video controls class="w-full rounded-lg">
+                                        <source src="https://files.catbox.moe/0l0chw" type="video/mp4">
+                                    </video>
+                                    <p class="text-gray-300 mt-2 text-sm text-center">TPOT 20 theater clip #3</p>
+                                </div>
+                                <div class="bg-gray-700/50 p-3 rounded-lg">
+                                    <video controls class="w-full rounded-lg">
+                                        <source src="https://files.catbox.moe/ilpfrn.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="text-gray-300 mt-2 text-sm text-center">TPOT 20 theater clip #4</p>
+                                </div>
+                                <div class="bg-gray-700/50 p-3 rounded-lg">
+                                    <video controls class="w-full rounded-lg">
+                                        <source src="https://files.catbox.moe/qb35eb.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="text-gray-300 mt-2 text-sm text-center">TPOT 20 theater clip #5</p>
+                                </div>
+                                <div class="bg-gray-700/50 p-3 rounded-lg">
+                                    <video controls class="w-full rounded-lg">
+                                        <source src="https://files.catbox.moe/pjrewq.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="text-gray-300 mt-2 text-sm text-center">TPOT 20 theater clip #6</p>
+                                </div>
+                                <div class="bg-gray-700/50 p-3 rounded-lg">
+                                    <video controls class="w-full rounded-lg">
+                                        <source src="https://files.catbox.moe/uevmek.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="text-gray-300 mt-2 text-sm text-center">TPOT 20 theater clip #7</p>
+                                </div>
+                                <div class="bg-gray-700/50 p-3 rounded-lg">
+                                    <video controls class="w-full rounded-lg">
+                                        <source src="https://files.catbox.moe/85uqdx.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="text-gray-300 mt-2 text-sm text-center">TPOT 20 theater clip #8</p>
+                                </div>
+                                <div class="bg-gray-700/50 p-3 rounded-lg">
+                                    <video controls class="w-full rounded-lg">
+                                        <source src="https://files.catbox.moe/g93h9i.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="text-gray-300 mt-2 text-sm text-center">TPOT 20 theater clip #9</p>
+                                </div>
+                                <div class="bg-gray-700/50 p-3 rounded-lg">
+                                    <video controls class="w-full rounded-lg">
+                                        <source src="https://files.catbox.moe/v8a3gd.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="text-gray-300 mt-2 text-sm text-center">TPOT 20 theater clip #10</p>
+                                </div>
+                                <div class="bg-gray-700/50 p-3 rounded-lg">
+                                    <video controls class="w-full rounded-lg">
+                                        <source src="https://files.catbox.moe/ic2s3r.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="text-gray-300 mt-2 text-sm text-center">TPOT 20 theater clip #11</p>
+                                </div>
+                                <div class="bg-gray-700/50 p-3 rounded-lg">
+                                    <video controls class="w-full rounded-lg">
+                                        <source src="https://files.catbox.moe/uqq54t.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="text-gray-300 mt-2 text-sm text-center">TPOT 20 theater clip #12</p>
+                                </div>
+                                <div class="bg-gray-700/50 p-3 rounded-lg">
+                                    <video controls class="w-full rounded-lg">
+                                        <source src="https://files.catbox.moe/51vobb.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="text-gray-300 mt-2 text-sm text-center">TPOT 20 theater clip #13</p>
+                                </div>
+                                <div class="bg-gray-700/50 p-3 rounded-lg">
+                                    <video controls class="w-full rounded-lg">
+                                        <source src="https://files.catbox.moe/ujbqh1.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="text-gray-300 mt-2 text-sm text-center">TPOT 20 theater clip #14</p>
+                                </div>
+                                <div class="bg-gray-700/50 p-3 rounded-lg">
+                                    <video controls class="w-full rounded-lg">
+                                        <source src="https://files.catbox.moe/q17eaj.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="text-gray-300 mt-2 text-sm text-center">TPOT 20 theater clip #15</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-6 p-4 bg-green-500/20 rounded-lg">
+                            <p class="text-green-300 text-sm">
+                                Clips filmed by audience members in theaters. Some clips may be repeated. Watermarks may appear.
+                            </p>
+                        </div>
+                        <span class="mission-status mt-4">Leaked</span>
+                    </div>
+
+                    <div class="file-item" style="max-width: 800px; margin: 0 auto; border-color: #3b82f6;">
+                        <h4 class="text-xl font-bold mb-4 text-blue-400">Official Q&A Revelations - TPOT 20</h4>
+                        <p class="text-gray-300 mb-4">
+                            Information revealed during the BFDI x II Tour 2025 Q&A sessions:
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="bg-blue-500/10 p-4 rounded-lg border-l-4 border-blue-500">
+                                <h5 class="font-bold text-blue-300 mb-2">Leafy's Fate</h5>
+                                <p class="text-gray-300 text-sm">
+                                    "We will find out what happened to leafy in tpot 20"
+                                </p>
+                            </div>
+
+                            <div class="bg-blue-500/10 p-4 rounded-lg border-l-4 border-blue-500">
+                                <h5 class="font-bold text-blue-300 mb-2">Algebralien Lore</h5>
+                                <p class="text-gray-300 text-sm">
+                                    "We will find out more about the algebarliens in future TPOT episodes (later on Sam says we might find out in TPOT 20)"
+                                </p>
+                            </div>
+
+                            <div class="bg-blue-500/10 p-4 rounded-lg border-l-4 border-blue-500">
+                                <h5 class="font-bold text-blue-300 mb-2">One & Three Origins</h5>
+                                <p class="text-gray-300 text-sm">
+                                    "One and Threes origin story will be revealed in TPOT 20"
+                                </p>
+                            </div>
+
+                            <div class="bg-blue-500/10 p-4 rounded-lg border-l-4 border-blue-500">
+                                <h5 class="font-bold text-blue-300 mb-2">Grassy's Role</h5>
+                                <p class="text-gray-300 text-sm">
+                                    "Grassy will get more screentime in TPOT 20"
+                                    "Grassy and Winner will have to find a way to get everyone back in TPOT 20"
+                                </p>
+                            </div>
+
+                            <div class="bg-blue-500/10 p-4 rounded-lg border-l-4 border-blue-500">
+                                <h5 class="font-bold text-blue-300 mb-2">Character Development</h5>
+                                <p class="text-gray-300 text-sm">
+                                    "More history of Three and others will be shown maybe in TPOT 20"
+                                    "TPOT 20 and episodes starting from now will focus on the backstories of the other algebaliens in TPOT"
+                                </p>
+                            </div>
+
+                            <div class="bg-blue-500/10 p-4 rounded-lg border-l-4 border-blue-500">
+                                <h5 class="font-bold text-blue-300 mb-2">Rejoin Information</h5>
+                                <p class="text-gray-300 text-sm">
+                                    "A rejoin for TPOT will happen sometime in TPOT 20-25"
+                                    "Probably no eliminated tpot contestants in tpot 20 but they are definitely getting more screentime"
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4 p-3 bg-blue-500/20 rounded-lg">
+                            <p class="text-blue-300 text-sm">
+                                All information from official BFDI x II Tour 2025 Q&A sessions
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-black/80 backdrop-blur-md border-t border-gray-800 mt-16">
+            <div class="container mx-auto px-4 py-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="footer-brand">
+                        <h3 class="text-white font-bold text-lg mb-4">OSC-LEAKS</h3>
+                        <p class="text-gray-400">Your source for exclusive BFDI, TPOT, and Inanimate Insanity leaks, behind-the-scenes content, and community discussions.</p>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="text-white font-semibold mb-4">Content</h4>
+                        <ul class="space-y-2">
+                            <li><a href="navigation.html" class="text-gray-400 hover:text-[#ff3366] transition">BFDI x II Tour</a></li>
+                            <li><a href="tpot.html" class="text-gray-400 hover:text-[#ff3366] transition">TPOT</a></li>
+                            <li><a href="ii.html" class="text-gray-400 hover:text-[#ff3366] transition">Inanimate Insanity</a></li>
+                            <li><a href="bfdia.html" class="text-gray-400 hover:text-[#ff3366] transition">BFDIA</a></li>
+                            <li><a href="downloads.html" class="text-gray-400 hover:text-[#ff3366] transition">Downloads</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="text-white font-semibold mb-4">Community</h4>
+                        <ul class="space-y-2">
+                            <li><a href="chat.html" class="text-gray-400 hover:text-[#ff3366] transition">Chat</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-[#ff3366] transition">Discord</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-[#ff3366] transition">Forums</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-[#ff3366] transition">Contribute</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-[#ff3366] transition">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="text-white font-semibold mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-[#ff3366] transition">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-[#ff3366] transition">Terms of Service</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-[#ff3366] transition">DMCA</a></li>
+                            <li><a href="credits.html" class="text-gray-400 hover:text-[#ff3366] transition">Credits</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Webrings and Buttons Section -->
+                <div class="footer-tabs mt-8">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="webrings">Webrings</button>
+                        <button class="tab-button" data-tab="buttons">Buttons 88x31</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="webrings">
+                            <div class="footer-column">
+                                <h4 class="text-white font-semibold mb-4">Webrings</h4>
+                                
+                                <!-- Rock Webring -->
+                                <div class="py-2">
+                                    <center>
+                                        <script data-widget="images" src="https://rock-webring.neocities.org/webstring.js"></script>
+                                    </center>
+                                </div>
+                                
+                                <!-- Hotline Webring -->
+                                <div class="py-2 border-t border-b border-orange-700">
+                                    <p class="text-cyan-400 mb-2">Hotline Webring</p>
+                                    <a href="https://hotlinewebring.club/osc-leaks/previous" class="webring-link">← Previous</a>
+                                    <span class="mx-3 text-cyan-300">//</span>
+                                    <a href="https://hotlinewebring.club/osc-leaks/next" class="webring-link">Next →</a>
+                                </div>
+                                
+                                <!-- Ghostring Webring -->
+                                <div class="py-2">
+                                    <p class="text-purple-400 mb-2">Ghostring</p>
+                                    <a href="https://ghostring.neocities.org/osc-leaks/previous" class="webring-link">← Previous</a>
+                                    <span class="mx-3 text-purple-300">//</span>
+                                    <a href="https://ghostring.neocities.org/osc-leaks/next" class="webring-link">Next →</a>
+                                </div>
+                                
+                                <!-- Low Tech Webring -->
+                                <div class="py-2 border-t border-b border-orange-600">
+                                    <p class="text-orange-400 mb-2">Low Tech Webring (Historic)</p>
+                                    <a href="#" class="webring-link">← Previous</a>
+                                    <span class="mx-3">//</span>
+                                    <a href="#" class="webring-link">Next →</a>
+                                </div>
+
+                                <!-- 404 Salad Webring -->
+                                <div class="py-2 border-t border-b border-blue-600">
+                                    <p class="text-blue-400 mb-2">404 Salad Webring</p>
+                                    <a href="https://404salad.github.io/webring/osc-leaks/previous" class="webring-link">←</a>
+                                    <a href="https://404salad.github.io/webring/" class="webring-link mx-2">404 Salad</a>
+                                    <a href="https://404salad.github.io/webring/osc-leaks/next" class="webring-link">→</a>
+                                </div>
+
+                                <!-- No AI Webring -->
+                                <div class="py-2 border-t border-b border-yellow-600">
+                                    <p class="text-yellow-500 mb-2">No AI Webring</p>
+                                    <map name="noaicode">
+                                        <area href="https://baccyflap.com/noai" target="_blank" shape="poly" coords="55,0,255,0,255,13,294,13,294,51,55,51" alt="no ai webring" title="no ai webring">
+                                        <area href="https://baccyflap.com/noai/?prv&s=osc" target="_top" shape="poly" coords="1,25,52,0,52,51" alt="previous" title="previous">
+                                        <area href="https://baccyflap.com/noai/?rnd" target="_top" shape="rect" coords="258,1,294,10" alt="random" title="random">
+                                        <area href="https://baccyflap.com/noai/?nxt&s=osc" target="_top" shape="poly" coords="349,25,297,0,297,51" alt="next" title="next">
+                                    </map>
+                                    <img usemap="#noaicode" src="https://baccyflap.com/noai/codewidget-d.gif" alt="No AI Webring Widget" class="mx-auto">
+                                </div>
+
+                                <!-- Yoyle City Webring -->
+                                <div class="py-2 border-t border-b border-green-500">
+                                    <p class="text-green-400 mb-2">Yoyle City Webring</p>
+                                    <div style="background-color:white; display:inline-block; padding:5px; border-radius:10px;">
+                                        <a href="https://lime360.pythonanywhere.com/prev?url=https://yoyle.city&site=https://osc-leaks.neocities.org">
+                                            <img src="https://yoyle.city/img/webring/prev.png" alt="Previous site" />
+                                        </a>
+                                        <a href="https://yoyle.city/webring">
+                                            <img src="https://yoyle.city/img/webring/button.png" alt="//web" />
+                                        </a>
+                                        <a href="https://lime360.pythonanywhere.com/next?url=https://yoyle.city&site=https://osc-leaks.neocities.org">
+                                            <img src="https://yoyle.city/img/webring/next.png" alt="Next site" />
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- OSC Webring (Horizontal) -->
+                                <div class="py-2 border-t border-b border-pink-500">
+                                    <div id="templateWebring" class="mx-auto">
+                                        <link rel="stylesheet" href="https://fan.nekoweb.org/webring.css">
+                                        <div id="webringiconbox">
+                                            <img id="iconWebring" src="https://fan.nekoweb.org/images/oscwricons/fantt.png" alt="OSC Webring Icon" class="mx-auto">
+                                        </div>
+                                        <div id="webringdescbox">
+                                            <p id="webringdesc" style="font-size: small;">
+                                                <strong>Fan</strong> is a certified<br>
+                                                <strong>Test Tube</strong> fan in the <strong>OSC Webring</strong>!
+                                            </p>
+                                        </div>
+                                        <div id="webringlinks">
+                                            <p id="linkparaWebring" style="font-size:small;"> | 
+                                                <a id="wr" href="https://fan.nekoweb.org/oscwrmem.html">Members List</a> | 
+                                                Part of the <a id="wr" href="https://fan.nekoweb.org/oscwr.html">OSC Webring</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- RoRing Webring -->
+                                <div class="py-2 border-t border-b border-red-500">
+                                    <p class="text-red-400 mb-2">RoRing</p>
+                                    <table><tr><td><a href="https://roring.neocities.org/files/stuff/prev?id=Oscleaks"> <img src="https://roring.neocities.org/files/deco/arrow21.png" height="30"></a></td><td><a href="https://roring.neocities.org/"><img src="https://roring.neocities.org/files/deco/widget2.png" width="150"></a></td><td><a href="https://roring.neocities.org/files/stuff/next?id=OscLeaks"><img src="https://roring.neocities.org/files/deco/arrow22.png" height="30"></a></td></tr></table>
+                                </div>
+                                
+                                <!-- ILoveWebring Webring Badge Embed -->
+                                <div id="ilovewebring-widget"></div>
+
+                                <!-- Additional Webrings -->
+                                <div id='gfdkris' class="py-2 border-t border-b border-indigo-600"> 
+                                    <p class="text-indigo-400 mb-2">Fab's Tarot Corner Webring</p>
+                                    <script type="text/javascript" src="https://fabstarotcorner.neocities.org/webring/onionring-variables.js"></script>
+                                    <script type="text/javascript" src="https://fabstarotcorner.neocities.org/webring/onionring-widget.js"></script>
+                                </div>
+
+                                <!-- DS Ring Webring -->
+                                <div id='dsring' class="py-2 border-t border-b border-teal-600">
+                                    <p class="text-teal-400 mb-2">DS Ring Webring</p>
+                                    <script type="text/javascript" src="https://dsring.neocities.org/onion/onionring-variables.js"></script>
+                                    <script type="text/javascript" src="https://dsring.neocities.org/onion/onionring-widget.js"></script>
+                                </div>
+
+                                <!-- "From [Country] With Love" (Brazil) Webring -->
+                                <div id='fcwl' class="py-2 border-t border-b border-green-600">
+                                    <p class="text-green-400 mb-2">From [Country] With Love (Brazil)</p>
+                                    <script type="text/javascript" src="https://beaus-silly-folder.nekoweb.org/my-webrings/FCWL/onionring-variables.js"></script>
+                                    <script type="text/javascript" src="https://beaus-silly-folder.nekoweb.org/my-webrings/FCWL/onionring-widget.js"></script>
+
+                                    <img src="https://beaus-silly-folder.nekoweb.org/my-webrings/FCWL/widgets/widget-images/braz_main.png" alt="From Country With Love - Brazil badge">
+                                </div>
+
+                                <!-- Epic Ring Webring -->
+<div id='epicring' class="py-2 border-t border-b border-yellow-500">
+    <p class="text-yellow-400 mb-2">Epic Ring Webring</p>
+    <script type="text/javascript" src="https://epic1.nekoweb.org/epicring/onionring-variables.js"></script>
+    <script type="text/javascript" src="https://epic1.nekoweb.org/epicring/onionring-widget.js"></script>
+</div>
+
+<!-- Linha de separação roxa -->
+<div class="border-t border-purple-500 my-4"></div>
+
+<!-- JaeWEB Webring -->
+<div id="JaeWEB" class="py-2">
+    <p class="text-purple-400 mb-2">JaeWEB Webring</p>
+    <script src="//web.jae.gg/webring-widget.js"></script>
+</div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane" id="buttons">
+                            <div class="buttons-grid">
+                                <a href="https://yoyle.city/" target="_blank">
+                                    <img src="https://yoyle.city/img/buttons/yoyledotcity.png" alt="Yoyle City" width="88" height="31">
+                                </a>
+                                <a href="https://amazingobjectrace.neocities.org/" target="_blank">
+                                    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/ezgif.com-animated-gif-maker(21).gif" alt="Button" width="88" height="31">
+                                </a>
+                                <a href="https://raymondtheterrible.neocities.org/"><img src="https://i.imgur.com/kCWvlS9.gif"></a> <br>
+                                <a href="https://osc-leaks.neocities.org/" target="_blank">
+                                    <img src="https://osc-leaks.neocities.org/Embeds/143%20Sem%20T%C3%ADtulo_20251022121617.png" alt="OscLeaks" width="88" height="31">
+                                </a>
+                                <img src="https://objectifiedcomic.neocities.org/button.png">
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                    <p class="text-gray-400">&copy; 2025 OSC-LEAKS. All rights reserved.</p>
+                    <p class="text-gray-500 text-sm mt-2">This site is not affiliated with jacknjellify or AnimationEpic. All content is used under fair use for educational and archival purposes.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://platform.twitter.com/widgets.js"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                document.querySelectorAll('#mobile-menu a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Initialize tabs
+            initTabs();
+            initFooterTabs();
+
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS('particles-js', {
+                    "particles": {
+                        "number": {"value":80,"density":{"enable":true,"value_area":800}},
+                        "color":{"value":"#ff3366"},
+                        "shape":{"type":"circle"},
+                        "opacity":{"value":0.5,"random":false},
+                        "size":{"value":3,"random":true},
+                        "line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.2,"width":1},
+                        "move":{"enable":true,"speed":2,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false}
+                    },
+                    "interactivity":{
+                        "detect_on":"canvas",
+                        "events":{
+                            "onhover":{"enable":true,"mode":"repulse"},
+                            "onclick":{"enable":true,"mode":"push"},
+                            "resize":true
+                        },
+                        "modes":{
+                            "repulse":{"distance":100,"duration":0.4},
+                            "push":{"particles_nb":4}
+                        }
+                    },
+                    "retina_detect":true
+                });
+            }
+        });
+
+        // Tab functionality
+        function initTabs() {
+            document.querySelectorAll('.mission-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    document.querySelectorAll('.mission-tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.mission-content').forEach(c => c.classList.remove('active'));
+                    
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        }
+
+        // Footer tab functionality
+        function initFooterTabs() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            if (tabButtons.length === 0) return;
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    const tabId = this.getAttribute('data-tab');
+                    const targetPane = document.getElementById(tabId);
+                    if (targetPane) {
+                        targetPane.classList.add('active');
+                    }
+                });
+            });
+
+            // ILoveWebring Webring Script
+            (function() {
+                var sites = [
+                    'https://osc-leaks.neocities.org/',
+                    'https://ragazzasola.neocities.org/',
+                    'https://ilovewebring.neocities.org/'
+                ];
+
+                var ringName = 'ILoveWebring';
+                var ringID = 'ilovewebring-widget';
+                var useIndex = true;
+                var indexPage = 'https://ilovewebring.neocities.org/webring.html';
+                var useRandom = true;
+
+                var tag = document.getElementById(ringID);
+                if (!tag) return;
+
+                var thisSite = window.location.href;
+                var thisIndex = null;
+
+                for (var i = 0; i < sites.length; i++) {
+                    if (thisSite.startsWith(sites[i])) {
+                        thisIndex = i;
+                        break;
+                    }
+                }
+
+                if (thisIndex === null) thisIndex = 0;
+
+                function randomSite() {
+                    var otherSites = sites.slice();
+                    if (thisIndex !== null) otherSites.splice(thisIndex, 1);
+                    var randomIndex = Math.floor(Math.random() * otherSites.length);
+                    location.href = otherSites[randomIndex];
+                }
+
+                var prevIndex = (thisIndex - 1 < 0) ? sites.length - 1 : thisIndex - 1;
+                var nextIndex = (thisIndex + 1 >= sites.length) ? 0 : thisIndex + 1;
+
+                tag.innerHTML = `
+                    <div class="badge-group">
+                        <div class="badge-ping">
+                            <span class="ping-bg"></span>
+                            <span class="ping-count">★</span>
+                        </div>
+                        <div class="badge-button">
+                            <div class="badge-inner">
+                                <div class="badge-text">
+                                    <span>${ringName}</span>
+                                    <span>Show your membership</span>
+                                </div>
+                                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                                    <a href="${sites[prevIndex]}" style="color:#b389ff; text-decoration:none;">← Previous</a>
+                                    ${useRandom ? `<a href="javascript:void(0)" onclick="randomSite()" style="color:#b389ff; text-decoration:none;">Random</a>` : ''}
+                                    ${useIndex ? `<a href="${indexPage}" style="color:#b389ff; text-decoration:none;">Index</a>` : ''}
+                                    <a href="${sites[nextIndex]}" style="color:#b389ff; text-decoration:none;">Next →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+            })();
+        }
+    </script>
+</body>
+</html>
